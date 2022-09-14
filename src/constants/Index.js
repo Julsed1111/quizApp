@@ -1,0 +1,1 @@
+export const API_URL = 'https://630c784f53a833c5342c1ab1.mockapi.io/quiz';

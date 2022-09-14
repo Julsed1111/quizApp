@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import store from "./store/store";
+import { Provider } from "react-redux"; 
+import { Quiz } from "./components/Quiz";
+import * as React from 'react';
+import { MyThemeProvider } from './components/ThemeProvider';
+import CssBaseline from '@mui/material/CssBaseline';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    
+      <MyThemeProvider>
+        <CssBaseline />
+        <Provider store={store}>
+          <Quiz/>
+        </Provider>
+      </MyThemeProvider>
+    
+    </>
   );
 }
 
